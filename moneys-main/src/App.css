@@ -1,0 +1,351 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #111;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.App {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* Header - Centered */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header-stats {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Panels Layout */
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.panel {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 8px;
+  flex: 1 1 48%;
+  min-width: 320px;
+}
+
+.panel-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Forms */
+.add-spending-form,
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Inputs */
+input,
+select,
+button,
+.search-input {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #444;
+  background: #222;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Select fix */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  height: 40px;
+  max-height: 40px;
+  line-height: 1.2;
+  overflow: hidden;
+  resize: none;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Placeholder fix */
+input::placeholder,
+.search-input::placeholder {
+  color: #888;
+}
+
+/* Buttons */
+.btn {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #4f46e5;
+  color: #fff;
+  border: none;
+}
+
+.btn-danger {
+  background-color: #dc2626;
+  color: #fff;
+  border: none;
+}
+
+.btn-secondary {
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
+/* Search + Filters */
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1 1 200px;
+}
+
+select {
+  flex: 1 1 160px;
+  min-width: 140px;
+}
+
+button {
+  flex-shrink: 0;
+}
+
+/* Spending List */
+.spending-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.spending-group {
+  margin-bottom: 1.5rem;
+}
+
+.spending-date {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Spending Item Layout */
+.spending-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2a2a2a;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.spending-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  min-width: 0;
+  word-break: break-word;
+}
+
+.spending-description {
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.spending-category {
+  font-size: 0.875rem;
+  color: #aaa;
+}
+
+.spending-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  flex-wrap: wrap;
+  min-width: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.spending-amount {
+  font-weight: bold;
+  color: #f87171;
+}
+
+/* Buttons next to amount */
+.spending-actions {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  min-width: 60px;
+}
+
+/* Category Breakdown */
+.category-breakdown {
+  margin-top: 2rem;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  padding: 0.25rem 0;
+}
+
+.category-color-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: orange;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.category-bar {
+  background: #333;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 0.25rem;
+}
+
+.category-bar-fill {
+  height: 100%;
+  background: orange;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .panel {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 8px;
+  flex: 1 1 48%;
+  min-width: 320px;
+  overflow-x: hidden;   /* 👈 forces inner content to stay in bounds */
+  box-sizing: border-box;
+}
+
+
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .spending-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2a2a2a;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    word-break: break-word;
+  }
+  .spending-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    min-width: 0;
+    word-break: break-word;
+  }
+  .spending-description {
+    font-weight: 500;
+    word-break: break-word;
+  }
+  .spending-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+  .spending-actions {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    min-width: 60px;
+  }
+}
+
+/* Adds spacing between each panel/section */
+.panel + .panel {
+  margin-top: 2rem;
+}
