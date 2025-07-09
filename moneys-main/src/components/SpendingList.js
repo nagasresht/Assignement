@@ -10,8 +10,7 @@ import {
   Heart, 
   Book, 
   Plane, 
-  MoreHorizontal,
-  Receipt // Added back Receipt icon
+  MoreHorizontal
 } from 'lucide-react';
 import EditSpendingModal from './EditSpendingModal';
 import { getCategoryById } from '../utils/spendingUtils';
@@ -78,7 +77,6 @@ const SpendingList = ({ spendings, onUpdateSpending, onDeleteSpending }) => {
   if (spendings.length === 0) {
     return (
       <div className="empty-state">
-        <Receipt className="empty-state-icon" />
         <p>No spendings found.</p>
         <p>Add your first spending to get started!</p>
       </div>
