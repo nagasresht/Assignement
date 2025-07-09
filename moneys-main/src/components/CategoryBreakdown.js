@@ -26,6 +26,7 @@ const CategoryBreakdown = ({ categoryBreakdown }) => {
           <h3 className="panel-title">Category Breakdown</h3>
         </div>
         <div className="empty-state">
+          {/* No image here, only text */}
           <p>No spending data available for breakdown.</p>
         </div>
       </div>
